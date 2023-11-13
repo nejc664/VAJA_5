@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "e38a0da9-03b6-4480-b01c-878967120e38",
+		"name": "VAJA_5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2204396"
+	},
+	"item": [
+		{
+			"name": "Val202",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.rtvslo.si/onair/val202",
+					"protocol": "https",
+					"host": [
+						"api",
+						"rtvslo",
+						"si"
+					],
+					"path": [
+						"onair",
+						"val202"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Weather",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.rtvslo.si/weather/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"rtvslo",
+						"si"
+					],
+					"path": [
+						"weather",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "trenutni čas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.rtvslo.si/misc/time",
+					"protocol": "https",
+					"host": [
+						"api",
+						"rtvslo",
+						"si"
+					],
+					"path": [
+						"misc",
+						"time"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7.del_avto",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.rtvslo.si/poll/getPolls/?client_id=8c5205a95060a482f0fc96b9162d9e3f&sectionId=31",
+					"protocol": "https",
+					"host": [
+						"api",
+						"rtvslo",
+						"si"
+					],
+					"path": [
+						"poll",
+						"getPolls",
+						""
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "8c5205a95060a482f0fc96b9162d9e3f"
+						},
+						{
+							"key": "sectionId",
+							"value": "31"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Uporaba Json RPC",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "8.novice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.rtvslo.si/news/getItem/607076?client_id=8c5205a95060a482f0fc96b9162d9e3f",
+					"protocol": "https",
+					"host": [
+						"api",
+						"rtvslo",
+						"si"
+					],
+					"path": [
+						"news",
+						"getItem",
+						"607076"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "8c5205a95060a482f0fc96b9162d9e3f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eth_getBlockByNumber Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"eth_getBlockByNumber\",\n    \"params\": [\n        \"0x11acf6f\",\n        true\n    ],\n    \"id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mainnet.infura.io/v3/90b41bbfb5bd4c4490fff9207cd36199",
+					"protocol": "https",
+					"host": [
+						"mainnet",
+						"infura",
+						"io"
+					],
+					"path": [
+						"v3",
+						"90b41bbfb5bd4c4490fff9207cd36199"
+					]
+				},
+				"description": "Returns information about a block by block number.\n\n#### Parameters\n\n`QUANTITY|TAG` - Integer representing a block number or one of the string tags `latest`,\n`earliest`, or `pending`, as described in\n[Block Parameter](https://besu.hyperledger.org/en/stable/HowTo/Interact/APIs/Using-JSON-RPC-API#block-parameter).\n\n`Boolean` - If `true`, returns the full [transaction objects](https://besu.hyperledger.org/en/stable/Reference/API-Objects#transaction-object);\nif `false`, returns only the hashes of the transactions.\n\n#### Returns\n\n`result` : *OBJECT* - [Block object](https://besu.hyperledger.org/en/stable/Reference/API-Objects#block-object) , or `null` when there is no\nblock."
+			},
+			"response": []
+		}
+	]
+}
